@@ -72,4 +72,3 @@ def prime_num():
 
 if __name__ == '__main__':
     degree(10)
-
