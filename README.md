@@ -4,3 +4,4 @@
   
 Ниже будет добавляться навигация по домашней работе:  
 * [first-homework-basic-python-202011](https://github.com/Shoggahhh/otus-homework/tree/master/first-homework/ "lesson1/2/3")
+* [second-homework-basic-python-202011](https://github.com/Shoggahhh/otus-homework/tree/master/second-homework "lessonaboutClasses)
