@@ -22,4 +22,3 @@ if __name__ == '__main__':
     print(electric_car.starting_car())
     print(electric_car.drive_through(15))
     print(electric_car.fuel_in_tank())
-
