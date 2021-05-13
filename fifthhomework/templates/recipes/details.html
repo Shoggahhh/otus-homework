@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Recipe #{{ recipe_id }}
+{% endblock %}
+
+{% block content %}
+  <h1>Recipe <code>{{ recipe_name }}</code></h1>
+  {% if recipe_id == 1 %}
+      <p>Take chicken, fry and eat</p>
+  {% endif %}
+  {% if recipe_id == 2 %}
+      <p>Buy chocolate chip cookies and enjoy</p>
+  {% endif %}
+  <a href="{{ url_for('recipe_app.list') }}">back to recipe list</a>
+{% endblock %}
