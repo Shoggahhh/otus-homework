@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 import rapi
 
 
-engine = create_engine("postgresql://user:qweasds121@localhost:5432/postgres", echo=True)
+engine = create_engine("postgresql://postgres:postgres@localhost:5432/postgres", echo=True)
 Base = declarative_base(bind=engine)
 
 session_factory = sessionmaker(bind=engine)
@@ -27,11 +27,11 @@ class User(Base):
 async def create_user():
     session = Session()
 
-    fields = await rapi.fetch_json()
-    name, nickname = fields
+    data = await rapi.fetch_json()
 
-    ed_user = User(name=name, nickname=nickname)
-    session.add(ed_user)
-    session.commit()
+    for name, nickname in data:
+        ed_user = User(name=name, nickname=nickname)
+        session.add(ed_user)
+        session.commit()
 
     session.close()
