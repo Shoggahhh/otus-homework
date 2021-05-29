@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}
+Заявка #{{ object.id }}
+{% endblock %}
+{% block container %}
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25">ID</li>
+  <li class="list-group-item w-25">{{ ticket.id }}</li>
+</ul>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25">Тема</li>
+  <li class="list-group-item w-25">{{ ticket.title}}</li>
+</ul>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25   ">Приоритет</li>
+  <li class="list-group-item w-25">{{ ticket.priority }}</li>
+</ul>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25">Статус</li>
+  <li class="list-group-item w-25">{{ ticket.status }}</li>
+</ul>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25">Назначено</li>
+  <li class="list-group-item w-25">{{ ticket.assigned_to }}</li>
+</ul>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25">Создано</li>
+  <li class="list-group-item w-25">{{ ticket.created }}</li>
+</ul>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25">Изменено</li>
+  <li class="list-group-item w-25">{{ ticket.modified }}</li>
+</ul>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item w-25">Описание</li>
+  <li class="list-group-item w-25">{{ ticket.description }}</li>
+</ul>
+<a class="btn btn-primary" href="{% url 'ticket_list'%}" role="button">К списку</a>
+{% endblock %}

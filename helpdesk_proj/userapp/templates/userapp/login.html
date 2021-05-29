@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+Аутентификация
+{% endblock %}
+{% block container %}
+<div class="card offset-lg-5 p-4" style="width: 18rem;">
+    <div class="card-body">
+        <div class="container align-content-center">
+            <form method="post" enctype="multipart/form-data">
+                   {% csrf_token %}
+                   {{ form.as_table }}
+                   <button class="btn btn-primary m-1" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
