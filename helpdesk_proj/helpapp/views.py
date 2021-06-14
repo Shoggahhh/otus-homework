@@ -16,10 +16,10 @@ class TicketCreate(CreateView):
     success_url = '/ticket_list/'
     form_class = TicketForm
 
-    def get_form(self, form_class=TicketForm):
-        form = super(TicketCreate, self).get_form(form_class)
-        form.fields['created'].widget.attrs.update({'class': 'datepicker'})
-        return form
+    # def get_form(self, form_class=TicketForm):
+    #     form = super(TicketCreate, self).get_form(form_class)
+    #     form.fields['created'].widget.attrs.update({'class': 'datepicker'})
+    #     return form
 
 
 class TicketDetail(DetailView):

@@ -3,10 +3,13 @@
 Создание заявки
 {% endblock %}
 {% block container %}
-<div class="card offset-lg-5 p-4" style="width: 18rem;">
+<div class="card offset-lg-2 p-2">
     <form method="post">
            {% csrf_token %}
-           {{ form.as_p }}
+{#           {{ form.as_p }}#}
+        <div class="form-control">{{ form.title }}</div>
+        <div class="form-control">{{ form.status }}</div>
+        <div class="form-control">{{ form.title }}</div>
            <button class="btn btn-primary m-1" type="submit">Создать</button>
     </form>
 </div>
